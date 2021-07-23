@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userService" class="com.atguigu.service.UserService">
+        <!--name:对象的属性名
+        ref：实体的对象名
+        需要依赖bean类里的set方法
+        -->
+        <property name="userDao" ref="userDaoimpl"></property>
+    </bean>
+    <bean id="userDaoimpl" class="com.atguigu.dao.UserDaoImpl">
+
+    </bean>
+</beans>

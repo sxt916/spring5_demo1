@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置User对象的创建-->
+    <bean id="user" class="com.atguigu.User"></bean>
+    <bean id="book" class="com.atguigu.Book">
+        <!--  注入属性-->
+        <property name="bname" value="资本论"></property>
+        <property name="bauthor">
+            <value><![CDATA[《马克思&恩格斯》]]></value>
+        </property>
+    </bean>
+    <bean id="order" class="com.atguigu.Orders">
+        <constructor-arg  name="oname" value="abc"></constructor-arg>
+        <constructor-arg name="addres" value="china"></constructor-arg>
+    </bean>
+
+
+</beans>
